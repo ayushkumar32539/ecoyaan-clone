@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+   
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.featuredPropBox ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: outside none none;
+    padding: 0;
+}
+
+.featuredPropBox ul li {
+    background-color: #eeeeee;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    display: block;
+    height: 250px;
+    margin: 5px;
+    width: 32%;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.featuredPropBox ul li:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(22, 22, 22, 0.6);
+    transition: all 0.3s;
+}
+
+.featuredPropBox ul li:nth-child(1) {
+    background-image: url('https://images.inc.com/uploaded_files/image/1920x1080/getty_106535542_84615.jpg');
+}
+
+.featuredPropBox ul li:nth-child(2) {
+    background-image: url('https://media.licdn.com/dms/image/D5612AQGf2YMI6wy6WQ/article-cover_image-shrink_600_2000/0/1689526592839?e=2147483647&v=beta&t=VW1UDfw441iuovg_On22nLeWCnCALCkCDdy2_31JGUY');
+}
+
+.featuredPropBox ul li:nth-child(3) {
+    background-image: url('https://img.freepik.com/premium-vector/businessman-use-newtons-cradle-make-impact-hit-target-make-impact-success-vector-concept_70921-1305.jpg');
+}
+
+.featuredPropBox ul li:nth-child(4) {
+    background-image: url('https://varthana.com/school/wp-content/uploads/2023/03/B211.jpg');
+}
+.featuredPropBox ul li:nth-child(5) {
+    background-image: url('https://m.economictimes.com/thumb/msid-74115869,width-1200,height-900,resizemode-4,imgsize-170277/innovation.jpg');
+}
+
+
+
+
+.featuredPropBox ul li .fplogo {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.fplogo{
+    color: white;
+    text-align: center;
+}
+
+.featuredPropBox ul li .fplogo img{
+    width: 100%;
+}
+
+.featuredPropBox ul li .fptext {
+    display: none;
+    font-size: 16px;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease 0s;
+    width: 65%;
+    z-index: 1;
+}
+
+.featuredPropBox ul li .fptext p {
+    color: #fff;
+    margin: 0px;
+}
+
+.featuredPropBox ul li:hover {
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2) inset;
+}
+
+.featuredPropBox ul li:hover:after {
+    background-color: rgba(22, 22, 22, 0.3);
+}
+
+.featuredPropBox ul li:hover .fplogo {
+    display: none;
+}
+
+.featuredPropBox ul li:hover .fptext {
+    display: block;
+}
+
+@media screen and (max-width: 550px){
+    .ul-column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .featuredPropBox ul li .fptext{
+        font-size: 12px;
+    }
+
+    .featuredPropBox ul li .fplogo{
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,79 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100vw;
+  overflow: hidden;
+  z-index:17!important;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Arial', sans-serif; /* Example font family */
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 1rem;
+  }
+  
+  .menu li:last-child {
+    margin-right: 3rem;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Arial', sans-serif; /* Example font family */
+    font-size: 1.2rem; /* Increase font size */
+    transition: color 0.3s ease; /* Add transition effect */
+  }
+  
+  .menu a:hover {
+    color: #ffffffcc; /* Change color on hover */
+  }
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #4CAF50;
+      padding: 1rem;
+      width: 100%;
+    }
+  
+    .menu.open {
+      display: flex;
+    }
+  
+    .menu li {
+      margin: 0;
+      margin-bottom: 0.5rem;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+  
